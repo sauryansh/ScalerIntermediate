@@ -2,7 +2,7 @@ package com._2array.day122Darray;
 
 import java.util.Scanner;
 
-public class PrintRowWIse {
+public class _01_L_PrintRowWIse {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int row = sc.nextInt();

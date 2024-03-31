@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class TransposeSquareMatrix {
     public static void main(String[] args) {
-        int [][]matrix = new int[5][5];
+        int [][]matrix = new int[7][7];
         fillMatrixWithRandomValues(matrix);
         print2dArray(matrix);
         //squareMatrixTranspose(matrix);

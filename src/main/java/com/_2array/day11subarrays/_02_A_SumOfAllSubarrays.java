@@ -1,6 +1,7 @@
 package com._2array.day11subarrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Problem Description
@@ -51,7 +52,15 @@ import java.util.ArrayList;
  * The different subarrays for the given array are: [2], [1], [3], [2, 1], [1, 3], [2, 1, 3].
  * Their sums are: 2 + 1 + 3 + 3 + 4 + 6 = 19
  */
-public class SumOfAllSubarrays {
+public class _02_A_SumOfAllSubarrays {
+    public static void main(String[] args) {
+        int []arr = new int[]{1,2,3};
+
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,2,3));
+        System.out.println(new _02_A_SumOfAllSubarrays().subarraySum(list));
+        System.out.println(new _02_A_SumOfAllSubarrays().subarraySumBF(list));
+        System.out.println(new _02_A_SumOfAllSubarrays().subarraySum(arr));
+    }
     public Long subarraySum(ArrayList<Integer> A) {
         long sum = 0L;
         int size = A.size();
@@ -67,8 +76,24 @@ public class SumOfAllSubarrays {
     public long subarraySum(int[] A) {
         long ans = 0;
         int n = A.length;
-        for (int i = 0; i < n; i++)
-            ans += (long)A[i] * (i + 1) * (n - i);
+        for (int i = 0; i < n; i++) {
+            int left = i + 1;
+            int right = n - i;
+            ans += (long)A[i] * left * right;
+        }
         return ans ;
+    }
+
+    public Long subarraySumBF(ArrayList<Integer> A) {
+        long sum =0L;
+        int n = A.size();
+        for(int i=0;i<n;i++){
+            for(int j=i;j<n;j++){
+                for (int k = i; k <= j; k++) {
+                    sum += A.get(k);
+                }
+            }
+        }
+        return sum;
     }
 }

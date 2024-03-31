@@ -13,6 +13,7 @@ public class _03MaxSubArraySum {
     }
 
     //Brute Force
+    //TC: O(n2)
     private Integer maxSubArray(List<Integer> A, int K) {
         int size = A.size();
         int start = 0;
@@ -83,7 +84,7 @@ public class _03MaxSubArraySum {
             sum=sum-A.get(start-1)+A.get(end);
             result=Math.max(sum,result);
         }
-        System.out.println("start: "+(start+1)+ " end: "+(end+1));
+        //System.out.println("start: "+(start+1)+ " end: "+(end+1));
         return result;
     }
 }

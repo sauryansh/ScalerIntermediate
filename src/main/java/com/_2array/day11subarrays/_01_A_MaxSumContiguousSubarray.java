@@ -45,11 +45,11 @@ Explanation 2:
 
  */
 
-public class MaxSumContiguousSubarray {
+public class _01_A_MaxSumContiguousSubarray {
     public static void main(String[] args) {
-        List<Integer> A = new ArrayList<>(Arrays.asList(1, 2, 3, 4, -10));
-        System.out.println(new MaxSumContiguousSubarray().maxSubArray(A));
-        System.out.println(new MaxSumContiguousSubarray().maxSubArrayOptimise(A));
+        List<Integer> A = new ArrayList<>(Arrays.asList(4,-1,2,1));
+        System.out.println(new _01_A_MaxSumContiguousSubarray().maxSubArray(A));
+        System.out.println(new _01_A_MaxSumContiguousSubarray().maxSubArrayOptimise(A));
     }
     //TLE: Constraint 1<=n<=10^6 , O(N^2) will compute to 10^12 iteration
     public int maxSubArray(final List<Integer> A) {
