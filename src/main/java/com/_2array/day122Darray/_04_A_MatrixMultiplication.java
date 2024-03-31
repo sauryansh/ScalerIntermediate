@@ -60,7 +60,7 @@ import java.util.Scanner;
 //Explanation 2:
 //
 // [[1, 1]].[[2], [3]] = [[1 * 2 + 1 * 3]] = [[5]]
-public class _04_AP_MatrixMultiplication {
+public class _04_A_MatrixMultiplication {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of rows for matrix 1: ");
@@ -84,7 +84,7 @@ public class _04_AP_MatrixMultiplication {
         fillMatrixWithRandomValues(twoDMatrix2);
         System.out.println(twoDMatrix1);
         System.out.println(twoDMatrix2);
-        System.out.println(new _04_AP_MatrixMultiplication().solve(twoDMatrix1,twoDMatrix2));
+        System.out.println(new _04_A_MatrixMultiplication().solve(twoDMatrix1,twoDMatrix2));
     }
 
     private static void fillMatrixWithRandomValues(ArrayList<ArrayList<Integer>> matrix) {
