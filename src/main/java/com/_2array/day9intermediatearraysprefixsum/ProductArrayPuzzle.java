@@ -6,7 +6,7 @@ import java.util.Collections;
 
 public class ProductArrayPuzzle {
     public static void main(String[] args) {
-        ArrayList<Integer> A = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+        ArrayList<Integer> A = new ArrayList<>(Arrays.asList(1,2,3,4));
         System.out.println(new ProductArrayPuzzle().solve(A));
     }
 

@@ -5,14 +5,15 @@ import java.util.Arrays;
 
 /**
  * Problem Description
- * You are given an integer array C of size A. Now you need to find a subarray (contiguous elements) so that the sum of contiguous elements is maximum.
+ * You are given an integer array C of size A.
+ * Now you need to find a subarray (contiguous elements) so that the sum of contiguous elements is maximum.
  * But the sum must not exceed B.
  *
  *
  * Problem Constraints
- * 1 <= A <= 103
- * 1 <= B <= 109
- * 1 <= C[i] <= 106
+ * 1 <= A <= 10^3
+ * 1 <= B <= 10^9
+ * 1 <= C[i] <= 10^6
  *
  *
  * Input Format

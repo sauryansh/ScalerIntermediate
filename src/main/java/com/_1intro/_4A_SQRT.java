@@ -1,4 +1,4 @@
-package com._1intro.day5;
+package com._1intro;
 
 public class _4A_SQRT {
     public static void main(String[] args) {

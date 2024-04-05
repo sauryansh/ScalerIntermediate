@@ -1,4 +1,4 @@
-package com.day14.bit1;
+package com._3bit;
 
 public class AddString {
     public static void main(String[] args) {

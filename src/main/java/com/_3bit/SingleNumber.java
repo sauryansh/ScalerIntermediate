@@ -1,4 +1,4 @@
-package com.day14.bit1;
+package com._3bit;
 
 import java.util.ArrayList;
 import java.util.Arrays;
