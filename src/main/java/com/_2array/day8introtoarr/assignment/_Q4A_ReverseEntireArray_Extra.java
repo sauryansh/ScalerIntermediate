@@ -1,15 +1,15 @@
-package com._2array.day8introtoarr;
+package com._2array.day8introtoarr.assignment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class _4A_ReverseEntireArray_Extra {
+public class _Q4A_ReverseEntireArray_Extra {
     public static void main(String[] args) {
         ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(-1,4,7,6,-2,7,8,10));
         ArrayList<Integer> secondArrayList = new ArrayList<>(Arrays.asList(-1,6,3,2,8,9,10));
 
-        System.out.println(new _4A_ReverseEntireArray_Extra().reverseArray(arrayList));
-        System.out.println(new _4A_ReverseEntireArray_Extra().reverseArray(secondArrayList));
+        System.out.println(new _Q4A_ReverseEntireArray_Extra().reverseArray(arrayList));
+        System.out.println(new _Q4A_ReverseEntireArray_Extra().reverseArray(secondArrayList));
     }
 
     private boolean reverseArray(ArrayList<Integer> arrayList) {

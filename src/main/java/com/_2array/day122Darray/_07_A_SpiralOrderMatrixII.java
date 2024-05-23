@@ -15,13 +15,13 @@ public class _07_A_SpiralOrderMatrixII {
         int col = A;
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
 
-        //Define array of size n
+        //Define an array of size n
         for (int i = 0; i < row; i++) {
-            ArrayList<Integer> list = new ArrayList<Integer>(Collections.nCopies(col, 0));
+            ArrayList<Integer> list = new ArrayList<>(Collections.nCopies(col, 0));
             result.add(list);
         }
 
-        //start from index 0 till centre
+        //start from index 0 till a center
         int start = 0;
         int end = 0;
         while (A > 1) {

@@ -1,4 +1,4 @@
-package com._2array.day8introtoarr;
+package com._2array.day8introtoarr.addprob;
 
 import java.util.ArrayList;
 import java.util.Arrays;

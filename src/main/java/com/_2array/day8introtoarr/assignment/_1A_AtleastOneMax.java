@@ -1,4 +1,4 @@
-package com._2array.day8introtoarr;
+package com._2array.day8introtoarr.assignment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,16 +13,16 @@ public class _1A_AtleastOneMax {
     public int solve(ArrayList<Integer> source){
         int max = Integer.MIN_VALUE;
 
-        for(int i=0;i<source.size();i++){
-            if(source.get(i)>=max){
-                max=source.get(i);
+        for (Integer value : source) {
+            if (value >= max) {
+                max = value;
             }
         }
 
         int countOfMax= 0;
 
-        for(int i=0;i<source.size();i++){
-            if(source.get(i)==max){
+        for (Integer integer : source) {
+            if (integer == max) {
                 countOfMax++;
             }
         }
@@ -34,13 +34,13 @@ public class _1A_AtleastOneMax {
         int max = Integer.MIN_VALUE;
         int countOfMax= 0;
 
-        for(int i=0;i<source.size();i++){
-            if(source.get(i)>=max){
-                if(source.get(i)==max){
+        for (Integer integer : source) {
+            if (integer >= max) {
+                if (integer == max) {
                     countOfMax++;
-                }else {
-                    max=source.get(i);
-                    countOfMax=1;
+                } else {
+                    max = integer;
+                    countOfMax = 1;
                 }
             }
         }

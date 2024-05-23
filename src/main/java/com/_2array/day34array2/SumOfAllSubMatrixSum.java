@@ -3,19 +3,31 @@ package com._2array.day34array2;
 import java.util.Arrays;
 
 public class SumOfAllSubMatrixSum {
+
     public static void main(String[] args) {
         SumOfAllSubMatrixSum solution = new SumOfAllSubMatrixSum();
 
         // Test case matrix
-        int[][] matrix = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+//        int[][] matrix = {
+//            {1, 2, 3},
+//            {4, 5, 6},
+//            {7, 8, 9}
+//        };
+      int[][] matrix = {
+            {1,5,2,3},
+            {7,2,3,4},
+            {3,4,3,5},
+            {8,4,2,3}
         };
+
+
 
         // Calculate and print the sum of all submatrices
         int totalSum = solution.submatrixSum(matrix);
         System.out.println("Sum of all submatrices: " + totalSum);
+
+        System.out.println(new SumOfAllSubMatrixSum().submatrixSumOP(matrix));
+        System.out.println(new SumOfAllSubMatrixSum().submatrixSumBF(matrix));
     }
 
     public int[][] prefixSum(int[][] matrix) {
@@ -41,6 +53,7 @@ public class SumOfAllSubMatrixSum {
 
         // Calculate prefix sum matrix
         int[][] prefixSum = prefixSum(matrix);
+        System.out.println(Arrays.deepToString(prefixSum));
 
         // Compute sum of all submatrices
         int totalSum = 0;
@@ -59,4 +72,40 @@ public class SumOfAllSubMatrixSum {
 
         return totalSum;
     }
+
+    public int submatrixSumBF(int[][] matrix){
+        int rowLen = matrix.length;
+        int colLen=matrix[0].length;
+        int sum=0;
+        for(int i=0;i<rowLen;i++){
+            for (int j = 0; j < colLen; j++) {
+                for (int k = 0; k < rowLen; k++) {
+                    for (int l = 0; l<colLen; l++) {
+                        for (int m = i; m <=k; m++) {
+                            for (int n = j; n <= l; n++) {
+                                sum+=matrix[m][n];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return sum;
+    }
+
+    public int submatrixSumOP(int[][] matrix){
+        int rowLen = matrix.length;
+        int colLen=matrix[0].length;
+        int sum=0;
+        for (int i = 0; i < rowLen; i++) {
+            for (int j = 0; j < colLen; j++) {
+                sum+= matrix[i][j]*
+                        (   (i+1)*(j+1)    *   (rowLen-i)*(colLen-j)
+                        );
+            }
+        }
+        return sum;
+    }
+
+
 }

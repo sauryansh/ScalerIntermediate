@@ -1,4 +1,4 @@
-package com._2array.day8introtoarr;
+package com._2array.day8introtoarr.addprob;
 
 public class LeftRotationGame {
     public static void main(String[] args) {
