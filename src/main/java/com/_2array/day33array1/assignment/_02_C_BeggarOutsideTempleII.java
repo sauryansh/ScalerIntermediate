@@ -1,4 +1,4 @@
-package com._2array.day33array1;
+package com._2array.day33array1.assignment;
 
 import java.util.ArrayList;
 import java.util.Arrays;

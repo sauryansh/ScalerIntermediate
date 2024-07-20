@@ -1,4 +1,4 @@
-package com._2array.day8introtoarr.assignment;
+package com._2array.day8introtoarr._01assignment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
